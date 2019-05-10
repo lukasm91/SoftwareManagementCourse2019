@@ -12,7 +12,7 @@ mkdir build && cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=$(pwd)/../install
 make install
 ./tests/test_norm
-cd ../../../excercise/dotprodcl
+cd ../../../exercise/dotprodcl
 mkdir build && cd build
 cmake .. -DDotprod_DIR=$(pwd)/../../../solution/dotprod_with_export/install/lib64/cmake
 make
