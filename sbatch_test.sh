@@ -1,4 +1,4 @@
-##!/bin/bash -l
+#!/bin/bash -l
 #SBATCH --time=00:10:00
 #SBATCH --nodes=1
 #SBATCH --constraint=gpu
