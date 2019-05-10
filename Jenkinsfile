@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Test') {
+            environment {
+                PATH = "$PATH:/usr/local/cmake-3.14.3-Linux-x86_64/bin"
+            }
             parallel {
                 stage('test1') {
                     agent {label 'node1'}
