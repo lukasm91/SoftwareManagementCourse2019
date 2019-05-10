@@ -4,7 +4,7 @@ pipeline {
         stage('Test) {
             parallel {
                 stage('test1') {
-                    node {label 'node1'}
+                    agent {label 'node1'}
                     steps {
                         sh '''cd cmake/handson/3_installing_libs/solution/dotprod_with_export
                               mkdir build && cd build
@@ -14,7 +14,7 @@ pipeline {
                     }
                 }
                 stage('test2') {
-                    node {label 'node2'}
+                    agent {label 'node2'}
                     steps {
                         sh '''cd cmake/handson/3_installing_libs/exercise/dotprodcl/src
                               mkdir build && cd build
