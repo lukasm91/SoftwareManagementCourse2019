@@ -4,7 +4,7 @@ pipeline {
         stage('test') {
             steps {
                 sh '''#!/bin/bash -l
-                      sbatch --wait sbatch_test.sh'''
+                      sbatch --wait sbatch_test.sh
                       cat test.out'''
             }
         }
