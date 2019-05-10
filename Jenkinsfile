@@ -26,6 +26,18 @@ pipeline {
                               ./src/dotprodcl --size=20'''
                     }
                 }
+                stage('test3') {
+                    agent {label 'node1'}
+                    steps {
+                        sh '''cd cmake/handson/4_advanced/soludtion/dotprod
+                              mkdir build && cd build
+                              cmake .. -DCMAKE_INSTALL_PREFIX=$(pwd)/../install -DCMAKE_CXX_FLAGS=-std=c++11
+                              make install
+                              make test'''
+                    }
+                }
+
+
             }
         }
     }
